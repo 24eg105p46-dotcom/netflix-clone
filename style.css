@@ -5,14 +5,20 @@
     font-family:'Poppins',sans-serif;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     background:#000;
     color:#fff;
 }
 
+/* Hero Section */
+
 .hero{
     width:100%;
-    height:100vh;
+    min-height:100vh;
     background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
     url("images/hero-bg.jpg");
     background-size:cover;
@@ -34,8 +40,9 @@ nav{
 }
 
 .logo{
-    background: url("images/hero-bg.jpg");
     width:150px;
+    height:auto;
+    display:block;
 }
 
 .nav-right{
@@ -59,17 +66,23 @@ nav button{
     border-radius:4px;
     cursor:pointer;
     font-weight:600;
+    transition:.3s;
+}
+
+nav button:hover{
+    background:#c11119;
 }
 
 .hero-content{
     text-align:center;
-    margin-top:140px;
+    margin-top:120px;
+    padding:0 20px;
 }
 
 .hero-content h1{
-    font-size:60px;
+    font-size:64px;
     font-weight:800;
-    line-height:1.2;
+    line-height:1.1;
 }
 
 .hero-content h3{
@@ -85,6 +98,7 @@ nav button{
     display:flex;
     justify-content:center;
     gap:10px;
+    flex-wrap:wrap;
 }
 
 .email-box input{
@@ -92,23 +106,27 @@ nav button{
     padding:15px;
     border:1px solid #666;
     background:rgba(0,0,0,.6);
-    color:white;
+    color:#fff;
     border-radius:4px;
+    outline:none;
 }
 
 .email-box button{
     background:#e50914;
-    color:white;
+    color:#fff;
     border:none;
     padding:15px 25px;
     font-size:18px;
     border-radius:4px;
     cursor:pointer;
+    transition:.3s;
 }
 
-/* ===========================
-   Feature Sections
-=========================== */
+.email-box button:hover{
+    background:#c11119;
+}
+
+/* Feature Sections */
 
 .feature{
     display:flex;
@@ -130,7 +148,6 @@ nav button{
 .feature .text h2{
     font-size:48px;
     margin-bottom:20px;
-    font-weight:700;
 }
 
 .feature .text p{
@@ -146,11 +163,14 @@ nav button{
 .feature .image img{
     width:100%;
     max-width:550px;
+    transition:.4s;
 }
 
-/* ===========================
-   FAQ
-=========================== */
+.feature .image img:hover{
+    transform:scale(1.05);
+}
+
+/* FAQ */
 
 .faq{
     padding:80px 12%;
@@ -175,6 +195,11 @@ nav button{
     align-items:center;
     cursor:pointer;
     font-size:24px;
+    transition:.3s;
+}
+
+.question:hover{
+    background:#414141;
 }
 
 .answer{
@@ -186,9 +211,7 @@ nav button{
     line-height:1.6;
 }
 
-/* ===========================
-   Footer
-=========================== */
+/* Footer */
 
 footer{
     border-top:8px solid #222;
@@ -210,29 +233,28 @@ footer{
 }
 
 .footer-links a:hover{
+    color:#fff;
     text-decoration:underline;
 }
-/* ===========================
-   Responsive Design
-=========================== */
 
-@media (max-width: 768px){
+/* Responsive */
+
+@media(max-width:768px){
 
     nav{
         width:95%;
     }
 
     .logo{
-        width:100px;
+        width:110px;
     }
 
     .hero-content{
         margin-top:80px;
-        padding:0 20px;
     }
 
     .hero-content h1{
-        font-size:36px;
+        font-size:38px;
     }
 
     .hero-content h3{
